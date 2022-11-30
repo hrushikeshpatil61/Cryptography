@@ -65,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     App.ToastMaker(c,"Enter input text to decrypt");
                 }
                 else if(keytext.getText().toString().length()!=8){
-                    App.DialogMaker(c,"Encrypted Error","Enter 8 length key"+"\n");
-                    //App.ToastMaker(c,"Enter proper 8 digit key for encryption");
+                    App.ToastMaker(c,"Enter proper 8 digit key for encryption");
                 }
                 else{
                     ciphertext.setText(encrypt(normaltext.getText().toString(),c));
@@ -146,37 +145,37 @@ public class MainActivity extends AppCompatActivity {
 
         }catch (NoSuchAlgorithmException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "DEcrypt Error";
         }
         catch (NoSuchPaddingException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "padding error";
         }
         catch (IllegalBlockSizeException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "BlockSize error";
         }
         catch (BadPaddingException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "Padding2nd error";
         }
         catch (InvalidKeyException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "Key ERror";
         }
         catch (UnsupportedEncodingException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "Decoding Error";
         }
         catch (Exception e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Decryption Error","Error="+"\n"+e.getMessage());
             return "Common Error";
         }
         return result;
@@ -195,37 +194,37 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (NoSuchAlgorithmException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "Encrypt Error";
         }
         catch (NoSuchPaddingException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "padding error";
         }
         catch (IllegalBlockSizeException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "BlockSize error";
         }
         catch (BadPaddingException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "Padding2nd error";
         }
         catch (InvalidKeyException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "Key ERror";
         }
         catch (UnsupportedEncodingException e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "Encoding Error";
         }
         catch (Exception e){
             e.printStackTrace();
-            App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
+            App.DialogMaker(c,"Encrypted Error","Error="+"\n"+e.getMessage());
             return "Common Error";
         }
         return crypted;
