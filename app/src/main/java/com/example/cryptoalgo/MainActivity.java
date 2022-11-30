@@ -45,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
             Window window = this.getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.setStatusBarColor(Color.parseColor("#2a9db7"));
+
+            window.setStatusBarColor(Color.parseColor("#0e33ed"));
         }
         c = MainActivity.this;
         normaltext = findViewById(R.id.normaltext);
@@ -129,44 +128,6 @@ public class MainActivity extends AppCompatActivity {
                 ciphertext.setText("");
             }
         });
-
-        normaltext.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                char_count.setText(normaltext.getText().toString().length()+"");
-            }
-        });
-
-        ciphertext.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                char_count2.setText(ciphertext.getText().toString().length()+"");
-            }
-        });
-
-
-
-
 
 
     }
