@@ -1,22 +1,19 @@
 package com.example.cryptoalgo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Base64;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
@@ -43,11 +40,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
-            Window window = this.getWindow();
-
-            window.setStatusBarColor(Color.parseColor("#0e33ed"));
-        }
+        Window window = this.getWindow();
+        window.setStatusBarColor(Color.parseColor("#0e33ed"));
         c = MainActivity.this;
         normaltext = findViewById(R.id.normaltext);
         keytext = findViewById(R.id.key);
