@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     ciphertext.setText(encrypt(normaltext.getText().toString(),c));
+                    normaltext.getText().clear();
                 }
             }
         });
@@ -93,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
                     App.ToastMaker(c,"Enter proper 8 digit key for encryption");
                 }
                 else{
-                    ciphertext.setText(decrypt(ciphertext.getText().toString(),c));
+                    normaltext.setText(decrypt(ciphertext.getText().toString(),c));
+                    ciphertext.getText().clear();
                 }
             }
         });
