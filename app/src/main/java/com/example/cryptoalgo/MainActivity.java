@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
                     App.ToastMaker(c,"Enter input text to decrypt");
                 }
                 else if(keytext.getText().toString().length()!=8){
-                    App.ToastMaker(c,"Enter proper 8 digit key for encryption");
+                    App.DialogMaker(c,"Encrypted Error","Enter 8 length key"+"\n");
+                    //App.ToastMaker(c,"Enter proper 8 digit key for encryption");
                 }
                 else{
                     ciphertext.setText(encrypt(normaltext.getText().toString(),c));
@@ -195,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
         catch (NoSuchAlgorithmException e){
             e.printStackTrace();
             App.DialogMaker(c,"Encrypted Error","Error"+"\n"+e.getMessage());
-            return "ENcrypt Error";
+            return "Encrypt Error";
         }
         catch (NoSuchPaddingException e){
             e.printStackTrace();

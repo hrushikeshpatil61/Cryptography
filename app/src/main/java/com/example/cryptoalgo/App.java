@@ -37,8 +37,8 @@ public class App extends Application {
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                dialogInterface.cancel();
             }
-        });
+        }).show();
     }
 }
